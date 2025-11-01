@@ -1,0 +1,359 @@
+/* ===== Global Style ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== Navbar ===== */
+header {
+  background-color: #7bbd8d;
+  color: #fff;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #d0ffe0;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('hero-bg.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 180px 20px;
+  margin-top: 70px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #9bd3a9;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #6cab7f;
+}
+
+/* ===== Produk Section ===== */
+.produk-section {
+  padding: 80px 10%;
+  background-color: #fff;
+}
+
+.produk-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #355e3b;
+}
+
+.produk-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.produk-card {
+  background-color: #f2f8f4;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.produk-card:hover {
+  transform: translateY(-8px);
+}
+
+.produk-card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.produk-card h3 {
+  margin: 1rem 0 0.5rem;
+  color: #355e3b;
+}
+
+.produk-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.price {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #7bbd8d;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+/* ===== Tentang Section ===== */
+.tentang-section {
+  background-color: #eaf6ee;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.tentang-section h2 {
+  color: #355e3b;
+  margin-bottom: 1rem;
+}
+
+.tentang-section p {
+  max-width: 800px;
+  margin: auto;
+  color: #555;
+}
+
+/* ===== Kontak Section ===== */
+.kontak-section {
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #fff;
+}
+
+.kontak-section h2 {
+  color: #355e3b;
+  margin-bottom: 1.5rem;
+}
+
+.kontak-section form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kontak-section input,
+.kontak-section textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.kontak-section button {
+  background-color: #7bbd8d;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.kontak-section button:hover {
+  background-color: #5c9971;
+}
+
+/* ===== Ikon Sosmed ===== */
+.sosmed {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sosmed-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  background-color: #7bbd8d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.sosmed-link:hover {
+  background-color: #5c9971;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #355e3b;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ===== Responsive ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .produk-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7bbd8d;
+    z-index: 999;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  /* Menu toggle (burger) */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .menu-toggle span {
+    background: #fff;
+    height: 3px;
+    width: 100%;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+
+  /* Burger berubah jadi X saat aktif */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+  }
+
+  /* Navigasi drop-down */
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #7bbd8d;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 0;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: 0 0 10px 10px;
+  }
+
+  nav ul.active {
+    display: flex;
+    animation: fadeSlide 0.3s ease;
+  }
+
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Hero biar gak ketiban header */
+  .hero {
+    margin-top: 90px;
+  }
+
+  /* Produk di mobile */
+  .produk-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .produk-card img {
+    height: 150px;
+  }
+
+  .produk-section,
+  .tentang-section,
+  .kontak-section {
+    padding: 60px 5%;
+  }
+
+  .sosmed {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
